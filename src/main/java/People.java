@@ -2,7 +2,7 @@ public abstract class People {
     private final String sex;
     private final String name;
     private final int age;
-    private final JobType job;
+    private final JobType jobb;
 
     public People(String sex, String name, int age, JobType job) {
         this.sex = sex;
