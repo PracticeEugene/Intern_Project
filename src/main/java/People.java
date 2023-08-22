@@ -16,6 +16,6 @@ public abstract class People {
         return  "sex='" + sex + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", job=" + job + ", ";
+                ", job=" + job;
     }
 }
