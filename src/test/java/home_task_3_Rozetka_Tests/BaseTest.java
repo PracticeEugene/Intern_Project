@@ -5,9 +5,9 @@ import home_task_3_Rozetka.pages.*;
 import home_task_3_Rozetka.steps.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
+
+import java.io.IOException;
 
 import static home_task_3_Rozetka.configuration.Configuration.CLEAR_COOKIES_AND_STORAGE;
 import static home_task_3_Rozetka.configuration.Configuration.HOLD_BROWSER_OPEN;
@@ -23,13 +23,14 @@ public class BaseTest {
     protected ProductPageSteps productPageSteps = new ProductPageSteps(driver);
     protected CartPopupPageSteps cartPopupPageSteps = new CartPopupPageSteps(driver);
 
+
     @BeforeTest
     public void openUrl() {
         basePage.open(ROZETKA_COM);
     }
 
     @AfterTest
-    public void clearCookiesAndLocalStorage() {
+    public void clearCookiesAndLocalStorage() throws IOException {
         if (CLEAR_COOKIES_AND_STORAGE) {
             JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
             driver.manage().deleteAllCookies();
@@ -37,10 +38,11 @@ public class BaseTest {
         }
     }
 
-    @AfterSuite(alwaysRun = true)
-    public void close() {
+    @AfterSuite
+    public void close() throws IOException {
         if (HOLD_BROWSER_OPEN) {
             driver.quit();
+            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         }
     }
 }

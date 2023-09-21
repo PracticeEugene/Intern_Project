@@ -9,8 +9,4 @@ public class Constants {
     public static class Url {
         public static final String ROZETKA_COM = "https://rozetka.com.ua/";
     }
-
-    public static class WindowScroll {
-        public static final String WINDOW_SCROLL = "window.scrollBy(0,500)";
-    }
 }

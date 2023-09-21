@@ -2,6 +2,7 @@ package home_task_3_Rozetka.configuration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
 import java.time.Duration;
@@ -16,7 +17,9 @@ public class CreateDriver {
         switch (PLATFORM_AND_BROWSER) {
             case "windows_chrome":
                 System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.setBinary("C:/Program Files (x86)/chrome-for-testing-win64/chrome.exe");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             default:
                 Assert.fail("Incorrect platform or browser name: " + PLATFORM_AND_BROWSER);
