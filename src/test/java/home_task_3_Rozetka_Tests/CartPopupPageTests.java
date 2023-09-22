@@ -3,7 +3,7 @@ package home_task_3_Rozetka_Tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CartPopupTests extends BaseTest {
+public class CartPopupPageTests extends BaseTest {
 
     @Test
     public void checkThatProductCanAddToCart() {

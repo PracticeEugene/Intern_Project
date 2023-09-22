@@ -22,15 +22,15 @@ public class BaseTest {
     protected NotebooksPageSteps notebooksPageSteps = new NotebooksPageSteps(driver);
     protected ProductPageSteps productPageSteps = new ProductPageSteps(driver);
     protected CartPopupPageSteps cartPopupPageSteps = new CartPopupPageSteps(driver);
+    protected FilterPageSteps filterPageSteps = new FilterPageSteps(driver);
 
-
-    @BeforeTest
+    @BeforeMethod
     public void openUrl() {
         basePage.open(ROZETKA_COM);
     }
 
-    @AfterTest
-    public void clearCookiesAndLocalStorage() throws IOException {
+    @AfterMethod
+    public void clearCookiesAndLocalStorage() {
         if (CLEAR_COOKIES_AND_STORAGE) {
             JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
             driver.manage().deleteAllCookies();

@@ -9,11 +9,6 @@ public class NotebooksPageSteps extends NotebooksPage {
         super(driver);
     }
 
-    @Step("Click 'Rozetka' checkbox filter in the filter menu")
-    public void clickCheckboxFilterRozetkaInTheFilterMenu() {
-        driver.findElement(checkboxFilterRozetkaInTheFilterMenu).click();
-    }
-
     @Step("Click on the first laptop in the product list")
     public void clickOnTheFirstLaptopInTheProductList() {
         driver.findElement(firstLaptopOnTheProductList).click();
