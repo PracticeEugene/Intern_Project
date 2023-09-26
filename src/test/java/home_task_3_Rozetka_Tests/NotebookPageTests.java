@@ -9,6 +9,6 @@ public class NotebookPageTests extends BaseTest {
     public void checkThatListProductsOnThePageHasNecessaryCountItems() {
         homePageSteps.clickLaptopsAndComputersCategoryInTheMainMenu();
         computersNotebooksPageSteps.clickLaptopsCategoryInTheListTiles();
-        Assert.assertEquals(driver.findElements(notebooksPageSteps.getListLaptopOnThePage()).size(),60);
+        Assert.assertEquals(driver.findElements(notebooksPageSteps.getListLaptopWithoutFilterOnThePage()).size(), 60);
     }
 }

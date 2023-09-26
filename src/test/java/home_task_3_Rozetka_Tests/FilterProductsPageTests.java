@@ -16,13 +16,33 @@ public class FilterProductsPageTests extends BaseTest {
     }
 
     @Test
-    public void checkThatSearchBrandFieldLookForBrand() {
+    public void checkThatSearchBrandFieldLookForNeededBrand() {
         homePageSteps.clickLaptopsAndComputersCategoryInTheMainMenu();
         computersNotebooksPageSteps.clickLaptopsCategoryInTheListTiles();
         filterPageSteps.completeTheSearchBrandFieldValueApple();
+        basePage.explicitWaitElementIsVisible(driver.findElement(filterPageSteps.getCheckboxApple()));
         filterPageSteps.clickOnTheProductCheckboxAfterSearching();
-        basePage.explicitWaitElementIsVisible(driver.findElement(filterPageSteps.getCheckboxApple())).isDisplayed();
-        String str = driver.findElement(notebooksPageSteps.getFirstLaptopOnTheProductList()).getAttribute("title");
-        System.out.println(str);
+        driver.findElement(filterPageSteps.getFilterIconApple()).isDisplayed();
+        Assert.assertTrue(driver.findElement(notebooksPageSteps.getFirstLaptopOnTheProductList()).getText().contains("Apple"));
+    }
+
+    @Test
+    public void checkThatPriceFilterDoesNotWorkWithInvalidValue() {
+        homePageSteps.clickLaptopsAndComputersCategoryInTheMainMenu();
+        computersNotebooksPageSteps.clickLaptopsCategoryInTheListTiles();
+        filterPageSteps.clearThePriceFilterFields();
+        filterPageSteps.completeThePriceFilterFieldsInvalidValue();
+        Assert.assertFalse(driver.findElement(filterPageSteps.getOkPriceFilterButton()).isEnabled());
+    }
+
+    @Test
+    public void checkThatUserCanToDeleteFilterFields() {
+        homePageSteps.clickLaptopsAndComputersCategoryInTheMainMenu();
+        computersNotebooksPageSteps.clickLaptopsCategoryInTheListTiles();
+        filterPageSteps.clickCheckboxFilterRozetkaInTheFilterMenu();
+        filterPageSteps.clickOkButtonPriceFilter();
+        filterPageSteps.clickDeleteFilterButton();
+        Assert.assertFalse(driver.findElement(filterPageSteps.getDeleteFilterButton()).isDisplayed());
     }
 }
+
