@@ -1,4 +1,4 @@
-package home_task_3_Rozetka.configuration;
+package Rozetka_Project.configuration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,8 +7,8 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-import static home_task_3_Rozetka.configuration.Configuration.PLATFORM_AND_BROWSER;
-import static home_task_3_Rozetka.configuration.Constants.TimeoutVariable.IMPLICIT_WAIT;
+import static Rozetka_Project.configuration.Configuration.PLATFORM_AND_BROWSER;
+import static Rozetka_Project.configuration.Constants.TimeoutVariable.IMPLICIT_WAIT;
 
 public class CreateDriver {
     public static WebDriver createDriver() {

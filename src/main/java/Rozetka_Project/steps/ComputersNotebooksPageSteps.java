@@ -1,6 +1,6 @@
-package home_task_3_Rozetka.steps;
+package Rozetka_Project.steps;
 
-import home_task_3_Rozetka.pages.ComputersNotebooksPage;
+import Rozetka_Project.pages.ComputersNotebooksPage;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.WebDriver;

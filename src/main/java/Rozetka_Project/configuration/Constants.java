@@ -1,4 +1,4 @@
-package home_task_3_Rozetka.configuration;
+package Rozetka_Project.configuration;
 
 public class Constants {
     public static class TimeoutVariable {

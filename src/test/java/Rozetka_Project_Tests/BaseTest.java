@@ -1,17 +1,17 @@
-package home_task_3_Rozetka_Tests;
+package Rozetka_Project_Tests;
 
-import home_task_3_Rozetka.configuration.CreateDriver;
-import home_task_3_Rozetka.pages.*;
-import home_task_3_Rozetka.steps.*;
+import Rozetka_Project.configuration.CreateDriver;
+import Rozetka_Project.pages.*;
+import Rozetka_Project.steps.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
 import java.io.IOException;
 
-import static home_task_3_Rozetka.configuration.Configuration.CLEAR_COOKIES_AND_STORAGE;
-import static home_task_3_Rozetka.configuration.Configuration.HOLD_BROWSER_OPEN;
-import static home_task_3_Rozetka.configuration.Constants.Url.ROZETKA_COM;
+import static Rozetka_Project.configuration.Configuration.CLEAR_COOKIES_AND_STORAGE;
+import static Rozetka_Project.configuration.Configuration.HOLD_BROWSER_OPEN;
+import static Rozetka_Project.configuration.Constants.Url.ROZETKA_COM;
 
 public class BaseTest {
     protected WebDriver driver = CreateDriver.createDriver();
@@ -42,7 +42,7 @@ public class BaseTest {
     public void close() throws IOException {
         if (HOLD_BROWSER_OPEN) {
             driver.quit();
-            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
+            //Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         }
     }
 }

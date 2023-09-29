@@ -1,4 +1,4 @@
-package home_task_3_Rozetka.pages;
+package Rozetka_Project.pages;
 
 import lombok.Getter;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package home_task_3_Rozetka_Tests;
+package Rozetka_Project_Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

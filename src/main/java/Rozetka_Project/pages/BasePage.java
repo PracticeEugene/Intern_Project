@@ -1,4 +1,4 @@
-package home_task_3_Rozetka.pages;
+package Rozetka_Project.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static home_task_3_Rozetka.configuration.Constants.TimeoutVariable.EXPLICIT_WAIT;
-import static home_task_3_Rozetka.configuration.Constants.TimeoutVariable.IMPLICIT_WAIT;
+import static Rozetka_Project.configuration.Constants.TimeoutVariable.EXPLICIT_WAIT;
+import static Rozetka_Project.configuration.Constants.TimeoutVariable.IMPLICIT_WAIT;
 
 public class BasePage {
     protected WebDriver driver;
