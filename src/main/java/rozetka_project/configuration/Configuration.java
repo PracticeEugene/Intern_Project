@@ -1,4 +1,4 @@
-package Rozetka_Project.configuration;
+package rozetka_project.configuration;
 
 public class Configuration {
     public static final String PLATFORM_AND_BROWSER = "windows_chrome";

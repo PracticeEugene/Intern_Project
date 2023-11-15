@@ -1,13 +1,13 @@
-package Rozetka_Project.steps;
+package rozetka_project.steps;
 
-import Rozetka_Project.pages.CartPopupPage;
+import rozetka_project.pages.CartPopupPage;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.WebDriver;
 
 @Log4j
-public class CartPopupPageSteps extends CartPopupPage {
-    public CartPopupPageSteps(WebDriver driver) {
+public class CartPopupSteps extends CartPopupPage {
+    public CartPopupSteps(WebDriver driver) {
         super(driver);
     }
 
@@ -28,4 +28,5 @@ public class CartPopupPageSteps extends CartPopupPage {
         driver.findElement(deleteProductButton).click();
         log.info("'Видалити' product button on the cart popup pressed");
     }
+
 }

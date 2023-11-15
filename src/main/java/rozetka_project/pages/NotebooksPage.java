@@ -1,4 +1,4 @@
-package Rozetka_Project.pages;
+package rozetka_project.pages;
 
 import lombok.Getter;
 import org.openqa.selenium.By;

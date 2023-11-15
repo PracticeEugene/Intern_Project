@@ -1,6 +1,6 @@
-package Rozetka_Project.steps;
+package rozetka_project.steps;
 
-import Rozetka_Project.pages.ProductPage;
+import rozetka_project.pages.ProductPage;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.*;

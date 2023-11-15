@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/home_task_1_OOP/General.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/loggingALL.log" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/test/java/home_task_3_Rozetka_Tests/BaseTest.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/java/home_task_3_Rozetka_Tests/CartPopupPageTests.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/java/home_task_3_Rozetka_Tests/CartPopupTests" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/test/java/Rozetka_Project_Tests/BaseTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/Rozetka_Project_Tests/CartPopupTests.java" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

@@ -1,13 +1,13 @@
-package Rozetka_Project.steps;
+package rozetka_project.steps;
 
-import Rozetka_Project.pages.ComputersNotebooksPage;
+import rozetka_project.pages.ComputersAndNotebooksPage;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.WebDriver;
 
 @Log4j
-public class ComputersNotebooksPageSteps extends ComputersNotebooksPage {
-    public ComputersNotebooksPageSteps(WebDriver driver) {
+public class ComputersAndNotebooksPageSteps extends ComputersAndNotebooksPage {
+    public ComputersAndNotebooksPageSteps(WebDriver driver) {
         super(driver);
     }
 

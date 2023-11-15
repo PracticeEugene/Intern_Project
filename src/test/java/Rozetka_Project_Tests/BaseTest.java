@@ -1,27 +1,24 @@
 package Rozetka_Project_Tests;
 
-import Rozetka_Project.configuration.CreateDriver;
-import Rozetka_Project.pages.*;
-import Rozetka_Project.steps.*;
+import rozetka_project.configuration.CreateDriver;
+import rozetka_project.pages.*;
+import rozetka_project.steps.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
-import java.io.IOException;
-
-import static Rozetka_Project.configuration.Configuration.CLEAR_COOKIES_AND_STORAGE;
-import static Rozetka_Project.configuration.Configuration.HOLD_BROWSER_OPEN;
-import static Rozetka_Project.configuration.Constants.Url.ROZETKA_COM;
+import static rozetka_project.configuration.Configuration.CLEAR_COOKIES_AND_STORAGE;
+import static rozetka_project.configuration.Configuration.HOLD_BROWSER_OPEN;
+import static rozetka_project.configuration.Constants.Url.ROZETKA_COM;
 
 public class BaseTest {
     protected WebDriver driver = CreateDriver.createDriver();
-
     protected BasePage basePage = new BasePage(driver);
     protected HomePageSteps homePageSteps = new HomePageSteps(driver);
-    protected ComputersNotebooksPageSteps computersNotebooksPageSteps = new ComputersNotebooksPageSteps(driver);
+    protected ComputersAndNotebooksPageSteps computersNotebooksPageSteps = new ComputersAndNotebooksPageSteps(driver);
     protected NotebooksPageSteps notebooksPageSteps = new NotebooksPageSteps(driver);
     protected ProductPageSteps productPageSteps = new ProductPageSteps(driver);
-    protected CartPopupPageSteps cartPopupPageSteps = new CartPopupPageSteps(driver);
+    protected CartPopupSteps cartPopupPageSteps = new CartPopupSteps(driver);
     protected FilterPageSteps filterPageSteps = new FilterPageSteps(driver);
 
     @BeforeMethod
@@ -39,10 +36,9 @@ public class BaseTest {
     }
 
     @AfterSuite
-    public void close() throws IOException {
+    public void close() {
         if (HOLD_BROWSER_OPEN) {
             driver.quit();
-            //Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         }
     }
 }

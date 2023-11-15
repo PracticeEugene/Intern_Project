@@ -1,4 +1,4 @@
-package Rozetka_Project.configuration;
+package rozetka_project.configuration;
 
 public class Constants {
     public static class TimeoutVariable {

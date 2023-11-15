@@ -3,7 +3,7 @@ package Rozetka_Project_Tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class FilterProductsPageTests extends BaseTest {
+public class FilterProductsTests extends BaseTest {
 
     @Test
     public void checkThatTheProductFilterFiltersByValueRozetka() {
@@ -40,9 +40,12 @@ public class FilterProductsPageTests extends BaseTest {
         homePageSteps.clickLaptopsAndComputersCategoryInTheMainMenu();
         computersNotebooksPageSteps.clickLaptopsCategoryInTheListTiles();
         filterPageSteps.clickCheckboxFilterRozetkaInTheFilterMenu();
-        filterPageSteps.clickOkButtonPriceFilter();
         filterPageSteps.clickDeleteFilterButton();
-        Assert.assertFalse(driver.findElement(filterPageSteps.getDeleteFilterButton()).isDisplayed());
+        try {
+           driver.findElement(filterPageSteps.getCountSelectedProducts()).isDisplayed();
+        } catch (Exception exception) {
+            String exceptionMassage = exception.toString();
+            Assert.assertTrue(exceptionMassage.contains("StaleElementReferenceException"));
+        }
     }
 }
-

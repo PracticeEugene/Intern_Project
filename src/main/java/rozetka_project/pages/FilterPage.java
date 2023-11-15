@@ -1,4 +1,4 @@
-package Rozetka_Project.pages;
+package rozetka_project.pages;
 
 import lombok.Getter;
 import org.openqa.selenium.By;
@@ -15,6 +15,7 @@ public class FilterPage extends BasePage {
     protected final By maxPriceFilterField = By.cssSelector("[formcontrolname='max']");
     protected final By okPriceFilterButton = By.cssSelector("[type='submit']");
     protected final By deleteFilterButton = By.xpath("//button[text()=' Скасувати ']");
+    protected final By countSelectedProducts = By.cssSelector("[class='catalog-selection__label ng-star-inserted']");
 
     public FilterPage(WebDriver driver) {
         super(driver);
